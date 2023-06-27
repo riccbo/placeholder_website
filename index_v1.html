@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- sets viewport for responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+
+        <!-- favicon -->
+        <link rel='icon' type='image' href="{% static 'homepage/img/favicon_dark.png'%}" media='(prefers-color-scheme: dark)'>
+        <link rel='icon' type='image' href="{% static 'homepage/img/favicon_light.png'%}" media='(prefers-color-scheme: light)'>
+
+        <!-- stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+        <!-- website title -->
+        <title>Riccardo Bove | CS</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="" id="name">RiccardoBove</a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="#about_me" class="navItem">ABOUT</a></li>
+                    <li><a href="#my_projects" class="navItem">PROJECTS</a></li>
+                    <li><a href="#skills" class="navItem">SKILLS</a></li>
+                    <li><a href="#contact" class="navItem">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <article id="about_me">
+            <h1 class="article__title">about_me</h1>
+            <img src="" alt="picture of me">
+            <div class="about">
+                <p>
+                    Hey my name is Riccardo,<br>I am a computer science student near Braunschweig, Germany and I love learning. When I was 11 years old I got my first pc and I was fascinated.
+                    From that point on I started spending a lot of time with computers and technology. Later I decided to learn to code in my free time and when I went on my year abroad in England I seized the opportunity and 
+                    took a computer science class. I was sure I will get my bachelor in computer science.
+                </p>
+                <input type='button' id='downloadbutton' value='Download CV' onclick="">
+            </div>
+            
+        </article>
+        
+        <article id="my_projects">
+            <h1 class="article__title">PROJECTS</h1>
+            <!-- Projects -->
+            
+            <div class="project">
+                <h1>TITLE</h1>
+                <!-- A single project should consist of an image and a text describing said project. A project could also have a seperate page, but that is not worth it yet-->
+                <div class="project__content">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <img src=""> <!-- Try to dynamically add images -->
+                    <div class="details">
+                        <p>Technology: PYTHON</p>
+                        <div class="circle">
+                            <p>Progress</br>100%</p> <!-- make new attribute progress -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article id="skills">
+            <h1 class="article__title">SKILLS</h1>
+            <ul class="skills__elements">
+                <li>
+                    <p>{{ skill.title }}</p>
+                    <div class="progress_bar_border">
+                        <div style="width: 100%;" class="progress_bar_bar"></div>
+                    </div>
+                </li>
+            </ul>
+        </article>
+
+        
+
+        <article id="contact">
+            <h1 class="article__title">CONTACT</h1>
+            <a href="mailto: riccbove@gmail.com">send email</a>
+        </article>
+
+    </body>
+</html>
